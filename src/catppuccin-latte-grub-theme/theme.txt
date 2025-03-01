@@ -13,17 +13,21 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
-# Logo image
-+ image {
-	left = 50%-50
-	top = 50%-50
-    file = "logo.png"
+# Show a countdown message using the label component
++ label {
+  top = 8%
+  left = 35%
+  width = 30%
+  align = "center"
+  id = "__timeout__"
+  text = "Booting in %d seconds"
+  color = "#4C4F69"
 }
 
 # Show the boot menu
 + boot_menu {
+	top = 45%
   left = 50%-240
-  top = 60%
   width = 480
   height = 30%
   item_font = "Unifont Regular 16"
@@ -36,15 +40,4 @@ terminal-border: "0"
   item_padding = 5
   item_spacing = 10
   selected_item_pixmap_style = "select_*.png"
-}
-
-# Show a countdown message using the label component
-+ label {
-  top = 82%
-  left = 35%
-  width = 30%
-  align = "center"
-  id = "__timeout__"
-  text = "Booting in %d seconds"
-  color = "#4C4F69"
 }
